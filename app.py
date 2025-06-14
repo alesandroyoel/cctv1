@@ -1,11 +1,11 @@
 #######################################################
 import uuid ## random id generator
-from streamlit_option_menu import option_menu
 from settings import *
+from streamlit_option_menu import option_menu
 #######################################################
 ## Disable Warnings
-st.set_option('deprecation.showPyplotGlobalUse', False)
-st.set_option('deprecation.showfileUploaderEncoding', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showfileUploaderEncoding', False)
 ################################################### Defining Static Data ###############################################
 st.sidebar.image('https://th.bing.com/th/id/OIP.FgvEBXnKfDC1yltDsFjEXAHaGa?r=0&rs=1&pid=ImgDetMain',
                  use_column_width=False)
@@ -25,7 +25,7 @@ html_temp = f"""
             """
 st.markdown(html_temp, unsafe_allow_html=True)
 
-###################### Defining Static Paths ###################4
+###################### Defining Static Paths ###################
 if st.sidebar.button('Click to Clear out all the data'):
     ## Clearing Visitor Database
     shutil.rmtree(VISITOR_DB, ignore_errors=True)
