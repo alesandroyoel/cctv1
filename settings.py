@@ -13,20 +13,18 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 LOG_CONFIG = os.path.join(ROOT_DIR, 'logging.yml')
 
-STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'static'
+# Define paths for downloads, logs, and output RELATIVE to the project root
+DOWNLOADS_PATH = os.path.join(ROOT_DIR, "downloads")
+if not os.path.exists(DOWNLOADS_PATH):
+    os.mkdir(DOWNLOADS_PATH)
 
-## We create a downloads directory within the streamlit static asset directory and we write output files to it
-DOWNLOADS_PATH = (STREAMLIT_STATIC_PATH / "downloads")
-if not DOWNLOADS_PATH.is_dir():
-    DOWNLOADS_PATH.mkdir()
+LOG_DIR = os.path.join(ROOT_DIR, "logs")
+if not os.path.exists(LOG_DIR):
+    os.mkdir(LOG_DIR)
 
-LOG_DIR = (STREAMLIT_STATIC_PATH / "logs")
-if not LOG_DIR.is_dir():
-    LOG_DIR.mkdir()
-
-OUT_DIR = (STREAMLIT_STATIC_PATH / "output")
-if not OUT_DIR.is_dir():
-    OUT_DIR.mkdir()
+OUT_DIR = os.path.join(ROOT_DIR, "output")
+if not os.path.exists(OUT_DIR):
+    os.mkdir(OUT_DIR)
 
 VISITOR_DB = os.path.join(ROOT_DIR, "visitor_database")
 # st.write(VISITOR_DB)
