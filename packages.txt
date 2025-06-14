@@ -1,1 +1,10 @@
+build-essential
 cmake
+pkg-config
+python3-dev
+libx11-dev
+libatlas-base-dev
+libgtk-3-dev
+gfortran
+libjpeg-dev
+libpng-dev
