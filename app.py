@@ -7,10 +7,10 @@ from settings import *
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_option('deprecation.showfileUploaderEncoding', False)
 ################################################### Defining Static Data ###############################################
-st.sidebar.image('https://i.flockusercontent2.com/q884s08qs8s9s4lb?r=1157408321',
+st.sidebar.image('https://th.bing.com/th/id/OIP.FgvEBXnKfDC1yltDsFjEXAHaGa?r=0&rs=1&pid=ImgDetMain',
                  use_column_width=False)
 st.sidebar.markdown("""
-                    > Made by [*Ashish Gopal*](https://www.linkedin.com/in/ashish-gopal)
+                    > Made by [*YP18*](https://github.com/alesandroyoel)
                     """)
 
 user_color      = '#000000'
