@@ -71,7 +71,7 @@ def add_data_db(df_visitor_details):
         df_all = pd.read_csv(os.path.join(data_path, file_db))
 
         if not df_all.empty:
-            df_all = df_all.append(df_visitor_details, ignore_index=False)
+            df_all = pd.concat([df_all, df_visitor_details], ignore_index=False)
             df_all.drop_duplicates(keep='first', inplace=True)
             df_all.reset_index(inplace=True, drop=True)
             df_all.to_csv(os.path.join(data_path, file_db), index=False)
@@ -128,7 +128,7 @@ def attendance(id, name):
         # st.write(df_attendace_temp)
     else:
         df_attendace = pd.read_csv(f_p)
-        df_attendace = df_attendace.append(df_attendace_temp)
+        df_attendace = pd.concat([df_attendace, df_attendace_temp], ignore_index=True)
         df_attendace.to_csv(f_p, index=False)
         # st.write(df_attendace)
 
